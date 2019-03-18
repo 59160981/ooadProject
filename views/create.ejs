@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Add User To Server</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+        <h1>Add User To Server</h1>
+        <form method="post" action="/users/postUser">
+          <div class="form-group">
+            <label for="item">Username</label>
+            <input type="text" class="form-control" id="username" name="username">
+          </div>
+          <div class="form-group">
+            <label for="item">Password</label>
+            <input type="text" class="form-control" id="password" name="password">
+          </div>
+          <div class="form-group">
+            <label for="item">type</label>
+            <select name="type" id="type">
+              <option value="" hidden>เลือก...</option>
+              <option value="student">นักเรียน</option>
+              <option value="teacher">อาจารย์</option>
+              <option value="officer">เจ้าหน้าที่</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-default">Add User</button>
+        </form>
+    </div>
+  </body>
+</html>
