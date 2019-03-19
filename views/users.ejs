@@ -12,6 +12,7 @@
           <tr>
             <td><b>username</b></td>
             <td><b>password</b></td>
+            <td><b>name</b></td>
             <td><b>type</b></td>
             <td colspan="2"></td>
           </tr>
@@ -21,15 +22,16 @@
           <tr>
             <td><%= users[i].username %></td>
             <td><%= users[i].password %></td>
+            <td><%= users[i].firstName %>   <%= users[i].lastName %></td>
             <td><%= users[i].type %></td>
-            <td><a href="/users/edit/<%= users[i]._id %>" class="btn btn-primary">Edit</a></td>
-            <td><a href="/users/delete/<%= users[i]._id %>" class="btn btn-danger">Delete</a></td>
+            <td><a href="/home/edit/<%= users[i]._id %>" class="btn btn-primary">Edit</a></td>
+            <td><a href="/home/delete/<%= users[i]._id %>" class="btn btn-danger">Delete</a></td>
           </tr>
           <% } %>
         </tbody>
       </table>
-      <a href="/users/create" class="btn btn-success">add user to database</a>
-      <a href="/users/login" class="btn btn-success">page login</a>
+      <a href="/home/create" class="btn btn-success">add user to database</a>
+      <a href="/home" class="btn btn-success">page login</a>
     </div>
   </body>
 </html>
